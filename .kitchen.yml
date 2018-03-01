@@ -1,5 +1,9 @@
 ---
+verifier:
+  name: inspec
+
 suites:
   - name: default
     run_list:
       - recipe[yum-kernel-osuosl::default]
+      - recipe[yum_test]

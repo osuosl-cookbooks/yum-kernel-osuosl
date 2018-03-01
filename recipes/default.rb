@@ -15,4 +15,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+yum_repository 'kernel-osuosl' do
+  node['yum']['kernel-osuosl'].each do |key, value|
+    send(key.to_sym, value)
+  end
+  only_if { platform_family?('rhel') && node['platform_version'].to_i >= 7 }
+end
