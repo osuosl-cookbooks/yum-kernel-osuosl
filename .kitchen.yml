@@ -6,4 +6,7 @@ suites:
   - name: default
     run_list:
       - recipe[yum-kernel-osuosl::default]
-      - recipe[yum_test]
+      - recipe[yum-kernel-osuosl::install]
+  - name: install
+    run_list:
+      - recipe[yum-kernel-osuosl::install]
