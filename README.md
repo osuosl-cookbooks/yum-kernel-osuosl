@@ -1,9 +1,6 @@
 yum-kernel-osuosl Cookbook
 ==========================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook installs the OSL kernel.
 
 Requirements
 ------------

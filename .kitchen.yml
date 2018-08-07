@@ -2,6 +2,9 @@
 verifier:
   name: inspec
 
+transport:
+  name: ssh
+
 suites:
   - name: default
     run_list:
