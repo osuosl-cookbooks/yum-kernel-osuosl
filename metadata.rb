@@ -7,7 +7,7 @@ issues_url       'https://github.com/osuosl-cookbooks/yum-kernel-osuosl/issues'
 source_url       'https://github.com/osuosl-cookbooks/yum-kernel-osuosl'
 description      'Installs/Configures yum-kernel-osuosl'
 long_description 'Installs/Configures yum-kernel-osuosl'
-version          '1.1.0'
+version          '2.0.0'
 
 depends          'yum'
 
