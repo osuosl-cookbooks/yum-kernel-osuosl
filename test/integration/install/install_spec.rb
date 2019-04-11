@@ -7,5 +7,5 @@ describe package('kernel-osuosl') do
 end
 
 describe command('grubby --default-kernel') do
-  its('stdout') { should match(/4.14.*-gentoo-osuosl/) }
+  its('stdout') { should match(/4.19.*-osuosl/) }
 end
