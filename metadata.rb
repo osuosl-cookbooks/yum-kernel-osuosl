@@ -9,6 +9,4 @@ description      'Installs/Configures yum-kernel-osuosl'
 long_description 'Installs/Configures yum-kernel-osuosl'
 version          '2.0.0'
 
-depends          'yum'
-
 supports         'centos', '~> 7.0'
