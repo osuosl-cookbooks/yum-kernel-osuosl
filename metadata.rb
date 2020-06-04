@@ -6,7 +6,6 @@ issues_url       'https://github.com/osuosl-cookbooks/yum-kernel-osuosl/issues'
 license          'Apache-2.0'
 chef_version     '>= 14.0'
 description      'Installs/Configures yum-kernel-osuosl'
-long_description 'Installs/Configures yum-kernel-osuosl'
 version          '2.1.0'
 
 supports         'centos', '~> 7.0'
