@@ -3,6 +3,10 @@ yum-kernel-osuosl CHANGELOG
 This file is used to list changes made in each version of the
 yum-kernel-osuosl cookbook.
 
+2.1.1 (2020-06-18)
+------------------
+- Chef 15 fixes
+
 2.1.0 (2020-01-15)
 ------------------
 - Chef 14 post-migration fixes
