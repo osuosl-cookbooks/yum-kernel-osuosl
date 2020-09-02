@@ -7,5 +7,5 @@ describe package('kernel-osuosl') do
 end
 
 describe command('grubby --default-kernel') do
-  its('stdout') { should match('5.4.*-osuosl') }
+  its('stdout') { should match(/5.4.*-osuosl/) }
 end
