@@ -3,6 +3,10 @@ yum-kernel-osuosl CHANGELOG
 This file is used to list changes made in each version of the
 yum-kernel-osuosl cookbook.
 
+2.3.0 (2022-03-18)
+------------------
+- Add POWER8 specific repo
+
 2.2.0 (2021-04-07)
 ------------------
 - Update Chef dependency to >= 16
