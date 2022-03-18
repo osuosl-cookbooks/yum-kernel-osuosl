@@ -6,7 +6,12 @@ default['yum']['kernel-osuosl']['gpgkey'] = 'https://ftp.osuosl.org/pub/osl/repo
 default['yum']['kernel-osuosl']['baseurl'] =
   case node['kernel']['machine']
   when 'ppc64le'
-    'https://ftp.osuosl.org/pub/osl/repos/yum/openpower/centos-$releasever/ppc64le/kernel-osuosl/'
+    # We have special POWER8 kernels
+    if node.read('ibm_power', 'cpu', 'cpu_model') =~ /power8/
+      'https://ftp.osuosl.org/pub/osl/repos/yum/$releasever/kernel-osuosl/$basearch-power8/'
+    else
+      'https://ftp.osuosl.org/pub/osl/repos/yum/$releasever/kernel-osuosl/$basearch/'
+    end
   else
     'https://ftp.osuosl.org/pub/osl/repos/yum/$releasever/kernel-osuosl/$basearch/'
   end

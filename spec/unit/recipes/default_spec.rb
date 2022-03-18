@@ -36,7 +36,26 @@ describe 'yum-kernel-osuosl::default' do
                 enabled: true,
                 gpgcheck: true,
                 gpgkey: 'https://ftp.osuosl.org/pub/osl/repos/yum/RPM-GPG-KEY-osuosl',
-                baseurl: 'https://ftp.osuosl.org/pub/osl/repos/yum/openpower/centos-$releasever/ppc64le/kernel-osuosl/'
+                baseurl: 'https://ftp.osuosl.org/pub/osl/repos/yum/$releasever/kernel-osuosl/$basearch/'
+              )
+          end
+        end
+        context 'ppc64le w/ POWER8' do
+          cached(:chef_run) do
+            ChefSpec::SoloRunner.new(p) do |node|
+              node.automatic['kernel']['machine'] = 'ppc64le'
+              node.automatic['ibm_power']['cpu']['cpu_model'] = 'power8e'
+            end.converge(described_recipe)
+          end
+          it do
+            expect(chef_run).to create_yum_repository('kernel-osuosl')
+              .with(
+                repositoryid: 'kernel-osuosl',
+                description: 'OSUOSL Linux Kernel',
+                enabled: true,
+                gpgcheck: true,
+                gpgkey: 'https://ftp.osuosl.org/pub/osl/repos/yum/RPM-GPG-KEY-osuosl',
+                baseurl: 'https://ftp.osuosl.org/pub/osl/repos/yum/$releasever/kernel-osuosl/$basearch-power8/'
               )
           end
         end
