@@ -3,6 +3,10 @@ yum-kernel-osuosl CHANGELOG
 This file is used to list changes made in each version of the
 yum-kernel-osuosl cookbook.
 
+2.3.1 (2024-04-22)
+------------------
+- Test Kitchen Config Refactor
+
 2.3.0 (2022-03-18)
 ------------------
 - Add POWER8 specific repo
