@@ -9,3 +9,4 @@ description      'Installs/Configures yum-kernel-osuosl'
 version          '2.3.0'
 
 supports         'centos', '~> 7.0'
+support          'almalinux', '~> 8.0'
