@@ -19,5 +19,5 @@ yum_repository 'kernel-osuosl' do
   node['yum']['kernel-osuosl'].each do |key, value|
     send(key.to_sym, value)
   end
-  only_if { platform_family?('rhel') && node['platform_version'].to_i >= 7 }
+  only_if { platform_family?('rhel') }
 end
