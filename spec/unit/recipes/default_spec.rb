@@ -10,7 +10,7 @@ describe 'yum-kernel-osuosl::default' do
         expect { chef_run }.to_not raise_error
       end
       case p
-      when CENTOS_7
+      when ALMA_8
         it do
           expect(chef_run).to create_yum_repository('kernel-osuosl')
             .with(
