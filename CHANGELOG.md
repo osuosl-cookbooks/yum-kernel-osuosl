@@ -3,6 +3,10 @@ yum-kernel-osuosl CHANGELOG
 This file is used to list changes made in each version of the
 yum-kernel-osuosl cookbook.
 
+2.4.0 (2024-07-17)
+------------------
+- Remove support for CentOS 7
+
 2.3.1 (2024-04-22)
 ------------------
 - Test Kitchen Config Refactor
