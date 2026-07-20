@@ -3,6 +3,10 @@ yum-kernel-osuosl CHANGELOG
 This file is used to list changes made in each version of the
 yum-kernel-osuosl cookbook.
 
+2.4.1 (2026-07-20)
+------------------
+- cinc: updated kitchen and dokken files
+
 2.4.0 (2024-07-17)
 ------------------
 - Remove support for CentOS 7
